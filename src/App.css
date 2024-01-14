@@ -1,0 +1,25 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
+
+
+.grid{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+}
+
+img{
+  width: 40%;
+}
+
+.card-user{
+ 
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+}
