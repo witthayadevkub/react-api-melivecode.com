@@ -33,9 +33,10 @@ function App() {
   console.log(UserData)
 
   return (
-    <div className="">
+    <div className="con">
       <header>
-        <nav>
+        <nav className='nav'>
+          <div className="logo">User</div>
           <ul>
             <li><a href="#section1">Section 1</a></li>
             <li><a href="#section2">Section 2</a></li>

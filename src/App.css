@@ -1,25 +1,90 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: antiquewhite;
+
 }
 
+.con{
 
-.grid{
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 1rem;
+  margin: 3rem;
+ 
+
+}
+
+.flex-gard{
+ 
+  margin: 1rem;
+  background-color:rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* display: grid;
+  
+  gap: 1rem; */
+  display:flex;
+  justify-content: space-around;
   gap: 1rem;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-img{
-  width: 40%;
+
+
+
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  font-size: 1.5rem;
+
+  & ul{
+    display: flex;
+    list-style: none;
+    
+    & li {
+      margin-left: 1rem;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-.card-user{
- 
-  border-radius: 5%;
-  background-color: rgb(255, 255, 255);
+/* cardUser */
+.box-card{
+  width: 20rem;
+  transition: transform 0.3s ease;
+  border-radius: 3%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: rgb(255, 255, 255); */
   padding: 1rem;
+}
+.box-card:hover{
+  transform: translateY(-10px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.card-user{
+  /* width: 15rem; */
+  height: 10rem;
+  
+ 
+  display:grid;
+  grid-template-columns: 2fr 3fr ;
+ 
+  overflow: hidden;
+  & .text{
+    text-align: start;
+    padding-left: 1rem ;
+
+  }
+  & img{
+    
+    width: 100%;
+    border-radius: 50%;
+ 
+    /* height: ; */
+     
+  }
 }
