@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import axios from 'axios'
 
 
-const AddUser = () => {
-
+const AddUser = ({fetcthData}) => {
+  const naviger = useNavigate()
   const [create, setCreate] = useState({
     fname: '',
     lname: '',
@@ -31,7 +31,8 @@ const AddUser = () => {
               'password': create.password,
               'avatar': create.avatar
         })
-       console.log(add)
+       fetcthData()
+       naviger('/')
       }else{
           alert('not success')
         } 
@@ -42,7 +43,7 @@ const AddUser = () => {
      }
   }
 
-  console.log(create)
+
   return (
     <div className=''>
         <Link to='/'><h5>go to Home</h5></Link>

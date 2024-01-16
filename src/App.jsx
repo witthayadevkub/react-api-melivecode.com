@@ -15,7 +15,6 @@ function App() {
   const fetcthData = async () => {
       setLoading(true)
       
-
      try{
       const data = await axios.get(`https://www.melivecode.com/api/users`)
       setUserData(data.data)
@@ -25,12 +24,12 @@ function App() {
       setLoading(false)
      }
   }
-
+ 
   useEffect(()=>{
-    fetcthData()
+      fetcthData()
   },[])
 
-  console.log(UserData)
+  // console.log(UserData)
 
   return (
     <div className="con">
@@ -48,13 +47,13 @@ function App() {
               
         <section id="section1">
           <h2>Section 1</h2>
-          <CardUser Id= "cardUser" UserData = {UserData} loading={loading}/>
+          <CardUser Id= "cardUser" UserData = {UserData} loading={loading} fetcthData={fetcthData}/>
           {/* Content for Section 1 */}
         </section>
 
         <section id="section2">
           <h2>Section 2</h2> 
-          <AddUser Id="addUser"/>
+          <AddUser Id="addUser" fetcthData={fetcthData}/>
           {/* Content for Section 2 */}
         </section>
 
